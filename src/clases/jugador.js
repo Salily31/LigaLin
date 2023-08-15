@@ -1,20 +1,41 @@
 
-export default class Jugador {
-    constructor(nombre , imagen , puntos , goles ,asistencias ,tiro , pase , verticalidad , ritmo , defensa , porteria,media ,  top  ){
-        this.nombre = nombre ;
-        this.imagen = imagen ; 
-        this.puntos = puntos;
-        this.goles = goles ; 
-        this.asistencias = asistencias ; 
-        this.tiro = tiro 
-        this.pase = pase 
-        this.verticalidad = verticalidad 
-        this.ritmo = ritmo 
-        this.defensa = defensa 
-        this.porteria = porteria
-        this.media = media;
-        this.top = top;
+const puntosPorGol = 1 ; 
+const puntosPorAsistencia = 0.5 ; 
+const puntosPorVictoria = 4 ;
 
+export default class Jugador {
+    constructor(jugadorJson){
+        this.nombre = jugadorJson.nombre ;
+        this.imagen = jugadorJson.imagen ; 
+        this.puntos = jugadorJson.puntos;
+        this.goles = jugadorJson.goles ; 
+        this.asistencias = jugadorJson.asistencias ; 
+        this.tiro = jugadorJson.tiro 
+        this.pase = jugadorJson.pase 
+        this.verticalidad = jugadorJson.verticalidad 
+        this.ritmo = jugadorJson.ritmo 
+        this.defensa = jugadorJson.defensa 
+        this.porteria = jugadorJson.porteria
+        this.media = jugadorJson.media;
+        this.partidosJugados = jugadorJson.partidosJugados;
+        this.partidosGanados = jugadorJson.partidosGanados;
+    }
+
+    obtenerMedia(){
+        let sumatorioEstadisticas = this.tiro + 
+                                this.pase + 
+                                this.verticalidad + 
+                                this.ritmo + 
+                                this.defensa + 
+                                this.porteria
+
+        this.media = sumatorioEstadisticas/6 | 0 
+    }
+    obtenerPuntos(){
+        let totalPuntos = this.goles * puntosPorGol; 
+        totalPuntos += this.asistencias * puntosPorAsistencia;
+        totalPuntos += this.partidosGanados * puntosPorVictoria; 
+        this.puntos = totalPuntos
     }
 }
 

@@ -1,5 +1,5 @@
 import {useState , useEffect} from 'react'
-import Jugador from "../clases/jugador"
+import Jugador from "../clases/Jugador"
 import CartaJugador from './CartaJugador'
 import '../styles/listaJugadores.css'
 import recuperarListaJugadoresApi from '../servicios/getListaJugadores'
@@ -14,10 +14,13 @@ export default function ListaJugadores(){
     const  [listaCartasJugadores , setListaCartasJugadores] = useState(null)
 
     useEffect(()=>{
+        /* Implementation con Api 
         recuperarListaJugadoresApi()
             .then(listaJugadoresDevuelta=>{
                 setListaCartasJugadores(listaJugadoresDevuelta)
             })
+        */ 
+        setListaCartasJugadores(recuperarListaJugadoresApi(2))
     },[])
     
 
@@ -36,7 +39,6 @@ export default function ListaJugadores(){
             {listaCartasJugadores!= null &&( 
             <div className= "listaJugadores">
                 {listaCartasJugadores.map((jugador, index )=> {
-                    console.log(jugador);
                     return <CartaJugador jugador = {jugador} color = {paletaColores[index]} />
                 })}
             </div>

@@ -1,6 +1,6 @@
 import {useState,useEffect}  from 'react'
 import PuntuacionJugador from './PuntuacionJugador'
-import Jugador from '../clases/jugador'
+import Jugador from '../clases/Jugador'
 import '../styles/tablaPuntuaciones.css'
 import recuperarListaJugadoresApi from '../servicios/getListaJugadores'
 
@@ -9,11 +9,13 @@ export default function TablaPuntuaciones(){
     const  [listaJugadores , setListaJugadores] = useState(null)
 
     useEffect(()=>{
+        /* Implementacion con Api 
         recuperarListaJugadoresApi()
             .then(listaJugadoresDevuelta=>{
-                listaJugadoresDevuelta.pop()
                 setListaJugadores(listaJugadoresDevuelta)
             })
+         */
+        setListaJugadores(recuperarListaJugadoresApi(1))
     },[])
     
     

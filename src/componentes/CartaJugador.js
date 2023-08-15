@@ -1,10 +1,13 @@
 import React from 'react'
 import "../styles/cartaJugador.css"
 
+
+
 export default function CartaJugador({jugador,color}){
     const colorDiv ={
         backgroundColor : color
     }
+    
 
     
     return(
@@ -13,6 +16,7 @@ export default function CartaJugador({jugador,color}){
             <div className =" contenedorZonaSuperior">
 
                 <div className="contenedorMedia">
+                    {console.log(jugador)}
                     {jugador.media}
                 </div>
 
