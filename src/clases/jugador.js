@@ -1,6 +1,6 @@
 
-const puntosPorGol = 1 ; 
-const puntosPorAsistencia = 0.5 ; 
+const puntosPorGol = 0.5 ; 
+const puntosPorAsistencia = 0.25 ; 
 const puntosPorVictoria = 4 ;
 
 export default class Jugador {
