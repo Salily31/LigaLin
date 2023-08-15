@@ -4,20 +4,35 @@ import '../styles/menuLateral.css'
 
 
 export default function MenuLateral() {
-    const body = document.body;
+
     const [isMenuOpen , setMenuStatus] = useState(false)
 
     const cambiarEstado = () =>{
         setMenuStatus(!isMenuOpen)
     }
-    /*
+
+    
+    
+
+    
     useEffect(()=>{
-        if(isMenuOpen){
-            body.style.overflow = "hidden"
-        }else{
-            body.style.overflow = "visible"
-        }
-    },[isMenuOpen])*/
+            
+            const handleClickFueraDelMenu = (event) => {
+                if( isMenuOpen && !event.target.classList.contains("imagenBotonMenu") && !event.target.classList.contains("menuLateral")){ 
+                    cambiarEstado()
+                }
+                
+            }  
+
+            document.addEventListener('click' , handleClickFueraDelMenu)
+            
+            return () => {
+                document.removeEventListener('click' , handleClickFueraDelMenu)
+            }
+           
+           /* */
+        
+    },[isMenuOpen])
     return (
         <>
             <div>
