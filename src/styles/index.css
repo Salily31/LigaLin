@@ -1,0 +1,20 @@
+body {
+  height : 98vh; 
+  width: 98vw;
+  background-color: #FFFFFF ;
+  padding: 0 px;
+  margin : 0 px; 
+  font-family: 'Figtree', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.App-Content{
+  
+  width : 100%;
+  height : 100%;
+
+  
+}
+
+

@@ -1,0 +1,87 @@
+
+.contenedorCarta{
+    border : solid 1px ; 
+    width : 25%;
+    height :10%;
+
+    display : flex ;
+    flex-direction : column ; 
+    text-align: center;
+    margin-right:8%;
+    margin-bottom:8%;
+    border: solid 0.5px;
+}
+
+.contenedorZonaSuperior{
+    display : flex ;
+    flex-direction : row ; 
+    margin-top : 7%;
+}
+
+.contenedorMedia {
+    margin-left : 8%; 
+    margin-top : 1%;
+    width : 15%;
+    font-size : 4vw;
+}
+.contenedorImagenCarta{
+    width : 75%;
+    margin-left:2%;
+}
+
+.imagenCarta{
+    width : 100%;
+    aspect-ratio: 1/1;
+    border-radius : 160px;
+}
+
+.nombreCarta{
+    margin-top:5%;
+    font-size : 2vw;
+    width : 75%;
+    margin-left:12.5%;
+    border-bottom : solid 1px black ; 
+}
+
+.contenedorZonaInferior{
+    margin-top:7%;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+.seccionIzquierdaCarta {
+    
+    margin-left:15%;
+}
+
+.seccionDerechaCarta {
+
+    margin-left:15%;
+}
+
+
+
+
+
+.contenedorZonaInferior{
+    display:flex; 
+    flex-direction : row;
+}
+
+
+@media (max-width:500px) {
+    .contenedorCarta{
+        width : 80%;
+    }
+    .contenedorMedia {
+        font-size : 10vw;
+    }
+    .nombreCarta{
+        font-size: 4vw;
+
+    }
+    .contenedorZonaInferior{
+        font-size: 4vw;
+    }
+}

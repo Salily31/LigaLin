@@ -1,0 +1,20 @@
+.divTextoJugadores{
+    margin-left : 44%;
+    margin-top : 5%;
+    font-size : 3vw;
+}
+
+.listaJugadores{
+    width : 70%;
+    margin-left : 22%;
+    margin-top : 6%;
+    display : flex ; 
+    flex-wrap: wrap;    
+}
+
+@media(max-width:500px){
+    .divTextoJugadores{
+        font-size : 6vw;
+        margin-left : 34%;
+    }
+}

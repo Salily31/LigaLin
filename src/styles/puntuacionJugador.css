@@ -1,0 +1,124 @@
+.puntuacionJugadorPrimario{
+
+    width: 100%;
+    height: 10%;
+    background-color : #F2542D;
+    border-bottom: solid 3px;
+    display : flex ; 
+    flex-direction : row ; 
+    font-weight : bold;
+    font-size : 3vw;
+    color: #03173a ;
+    align-items: center;
+    padding : 0 ;
+    margin-bottom : 1%;
+    position: relative ; 
+}
+.puntuacionJugadorSecundario{
+
+    width: 100%;
+    height: 10%;
+    background-color : #03173a;
+    border-bottom: solid 3px;
+    display : flex ; 
+    flex-direction : row ; 
+    font-weight : bold;
+    font-size : 3vw;
+    color: #F2542D ;  
+    align-items: center;
+    padding : 0 ;
+    margin-bottom : 1%;
+    position : relative ; 
+}
+
+.topJugador{
+    margin-left: 6%;
+    color : white ; 
+
+}
+
+.contenedorImagenJugador{
+    margin :1%;
+    margin-left: 4%;
+    width: 12%;
+    height: auto;
+}
+
+.imagenJugador{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius : 160px;
+
+}
+
+.nombreJugador{
+    margin-left: 6%;
+}
+
+.conjuntoDatos{
+  display:flex;
+  flex-direction : row; 
+  position:absolute ;
+  right : 10%; 
+  width : 30%;
+  justify-content: space-around;
+
+}
+.puntosJugador{
+    margin-left: 10%;
+}
+.golesJugador{
+    margin-left: 10%;
+}
+.asistenciasJugador{
+    margin-left: 10%;
+}
+
+
+.puntuacionJugadorPrimario {
+    animation: 2s anim-lineLeft ease-out ;
+  }
+  @keyframes anim-lineLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  .puntuacionJugadorSecundario {
+    animation: 2s anim-lineRight ease-out ;
+  }
+  @keyframes anim-lineRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  /* Seccion para moviles */
+
+ 

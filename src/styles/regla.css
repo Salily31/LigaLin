@@ -1,0 +1,46 @@
+
+.contenedorCabecera{
+    position : relative ; 
+    display : flex ; 
+    flex-direction : row ; 
+    width : 60%;
+    align-items: center;
+    color : #03173a;
+    margin-bottom : 3%;
+    z-index : 0 ;
+}
+
+.contenedorTitulo {
+    font-size:2vw;
+
+}
+.botonDesplegable {
+    position :  absolute;
+    width : 100%;
+    height : 100%;
+    border : none ; 
+    background-color: transparent;
+    z-index : 0 ;
+    
+}
+.contenedorCabecera:hover{
+    color : #F2542D;
+}
+
+.contenedorTexto{
+    margin-top:3%;
+    margin-bottom:3%;
+    font-size:1.1vw;
+    font-weight: normal;
+}
+
+
+@media(max-width:500px){
+    .contenedorTitulo{
+        font-size:4.4vw;
+        
+    }
+    .contenedorTexto{
+        font-size :3vw;
+    }
+}

@@ -1,0 +1,55 @@
+
+.divTextoClasificacion{
+    margin-left : 38%;
+    margin-top : 5%;
+    font-size : 3vw;
+}
+
+.divCabecera{
+    border-bottom:solid 2px black;
+    margin-left : 27.5%;
+    margin-top : 3%;
+    width:45%;
+    color: #F2542D;
+}
+.divTextoSecciones{
+    font-size: 2.5vw;
+    margin-top : 2%;                                
+    margin-left : 69%;
+    letter-spacing: 0.9vw;
+    margin-bottom : 2%;
+}   
+
+.tablaPuntuaciones{
+    width : 45%;
+    margin-left : 27.5%;
+    margin-top : 2%;
+    
+}
+
+@media (max-width: 500px) {
+    .divTextoClasificacion{
+        margin-left : 30%;
+        margin-top : 8%;
+        font-size : 1.2rem;
+    }
+
+    .divCabecera{
+        border-bottom:solid 2px;
+        margin-left : 10%;
+        width:80%;
+    
+    }
+
+    .divTextoSecciones{
+        margin-left : 72%;
+        font-size: 3.5vw; 
+    }
+
+    .tablaPuntuaciones{
+        margin-top :4%;
+        margin-left:10%;
+        width: 80%;
+    }
+  }
+
